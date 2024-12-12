@@ -1,5 +1,6 @@
 let netPrice;
 // console.log(netPrice)
+let Netprice  = document.querySelector("#netPrice").innerContent = netPrice;
 
 let tbody = document.querySelector("tbody");
 let table = document.querySelector("table")
@@ -26,16 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     let detail = JSON.parse(localStorage.getItem("data")) ?? [];
 
-        detail.push({
-            "items": items,
-            "stp": stp,
-            "qty": qty,
-            "disc": disc,
-        });
-        localStorage.setItem("data", JSON.stringify(detail));
-
-        
-        let price = stp; 
+         let price = stp; 
         let percentage = 100;
         let discount = disc;
         let quantity = qty;
@@ -44,11 +36,20 @@ document.addEventListener('DOMContentLoaded', () => {
             netPrice = (price * discount) / percentage ;
             
             function myfunc(){
-                return (netPrice - price) * quantity;
+                return (price - discount) * quantity;
             }
         }
-            myfunc()
-            console.log(myfunc())
+            myfunc();
+            console.log(myfunc());
+
+        detail.push({
+            "items": items,
+            "stp": stp,
+            "qty": qty,
+            "disc": disc,
+            "netPrice": netPrice
+               });
+        localStorage.setItem("data", JSON.stringify(detail));
 
         // console.log(items , stp, qty , disc);
         e.preventDefault();
