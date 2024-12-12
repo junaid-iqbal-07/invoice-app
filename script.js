@@ -1,7 +1,5 @@
 let netPrice;
 // console.log(netPrice)
-let Netprice  = document.querySelector("#netPrice").innerContent = netPrice;
-
 let tbody = document.querySelector("tbody");
 let table = document.querySelector("table")
 let costomerName;
@@ -50,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
             "netPrice": netPrice
                });
         localStorage.setItem("data", JSON.stringify(detail));
-
         // console.log(items , stp, qty , disc);
         e.preventDefault();
       display_tableData();
