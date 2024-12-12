@@ -1,0 +1,268 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 100vw;
+    height: auto;
+    background: #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    button{
+        width: 60px;
+        height: 30px;
+        font-size: 18px;
+        margin: 20px;
+        background: blue;
+        color: honeydew;
+        cursor: pointer;
+    }
+}
+
+.text-box{
+    width: 30vw;
+    height: 120px;
+    border: 2px solid rgb(13, 14, 13);
+    text-align: center;
+
+    h1{
+        padding: 10px;
+        font-size: 35px;
+    }
+
+    h2{
+        font-size: 30px;
+        font-weight: bolder;
+        box-shadow: 0 0 20px #7d8b7d;
+        width: 300px;
+        margin: auto;
+        border-radius: 20px;
+    }
+}
+
+.costomer-box{
+    width: 60vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    border: 2px solid rgb(20, 20, 20);
+}
+
+.costomer-data{
+    width: 30vw;
+    border: 1px solid rgb(17, 17, 17);
+
+    label{
+        font-size: 25px;
+        padding: px;
+        display: inline-block;
+        
+    }
+    input{
+        width: 200px;
+        height: 25px;
+        margin: 15px;
+    }
+}
+
+.data{
+    width: 25vw;
+    height: 50px;
+    border: 2px solid black;
+
+    label{
+        font-size: 35px;
+        padding: 10px;
+    }
+
+    input{
+        width: 200px;
+        height: 30px;
+    }
+
+}
+@media(max-width: 800px){
+    .container .text-box{
+        width: 100vw;
+    }
+    
+    .costomer-box{
+        width: 100vw;
+        height: auto;
+        border: 2px solid rgb(14, 13, 13);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        }
+    
+    .costomer-data{
+        width: 90vw;
+        margin: 10px auto;
+    
+        label{
+            display: block;
+            padding: 0;
+            font-size: 30px;
+        }
+        input{
+            display: block;
+            width: 100%;
+            height: 40px;
+            font-size: 20px;
+            border-radius: 20px;
+            border: none;
+            padding: 10px;
+            margin: 0;
+        }
+    }
+    
+    .data{
+        width: 100vw;
+        margin: 5px;
+    
+    }
+}
+/*  */
+.invoice-box{
+    width: 85vw;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(12, 12, 12);
+
+    form{
+        width: 80vw;
+        border: 1px solid rgb(10, 10, 10);
+
+        label{
+            font-size: 25px;
+            padding: 10px;
+        }
+        input{
+            width: 200px;
+            height: 25px;
+        }
+    }
+    
+    input[type=submit]{
+        width: 60px;
+        height: 30px;
+        font-size: 18px;
+        background: blue;
+        color: honeydew;
+        cursor: pointer;
+        font-weight: bold;
+    }
+}
+/*  */
+@media (max-width: 800px) {
+    .invoice-box{
+        width: 100vw;
+        height: auto;
+        flex-direction: column;
+
+        form{
+            width: 90vw;
+            margin: auto;
+               
+            label{
+                display: block;
+                padding: 0;
+                font-size: 30px;
+            }
+            input{
+                width: 100%;
+                border-radius: 20px;
+                border: none;
+                padding: 10px;
+                margin: 0;
+                height: 40px;
+            }
+            
+        }
+        input[type=submit]{
+            display: block;
+            width: 100px;
+            height: 50px;
+            margin: 10px auto;
+        }
+    }
+}
+/*  */
+.table-box{
+    width: 80vw;
+    border: 2px solid black;
+
+    .costomer-list{
+        width: 50vw;
+        border: 1px solid rgb(8, 8, 8);
+        margin-left: 20px;
+
+        h1{
+            font-size: 30px;
+            padding: 5px;
+        }
+        h3{
+            padding: 5px;
+            font-size: 25px;
+        }
+        h4{
+            padding: 5px;
+            font-size: 20px;
+        }
+    }
+    table{
+        border: 2px solid black;
+        width: 80vw;
+        text-align: center;
+        font-size: 20px;
+        thead{
+            td{
+                border: 1px solid black;
+                font-size: 25px;
+            }
+        }
+        tbody{
+            td{
+                border: 1px solid black;
+            }
+        }
+    }
+}
+/*  */
+@media(max-width: 800px){
+    .table-box{
+        width: 100vw;
+        border: 2px solid black;
+    
+        .costomer-list{
+            width: 80vw;
+            border: 1px solid rgb(12, 12, 12);
+            margin-left: 20px;
+    
+        }
+        table{
+            border: 2px solid black;
+            width: 100vw;
+            text-align: center;
+            font-size: 20px;
+    }
+}
+}
+/*  */
