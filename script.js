@@ -25,20 +25,20 @@ document.addEventListener('DOMContentLoaded', () => {
     
     let detail = JSON.parse(localStorage.getItem("data")) ?? [];
 
-         let price = stp; 
-        let percentage = 100;
-        let discount = disc;
-        let quantity = qty;
-        
-         if(price == price.valueOf(price)){
-            netPrice = (price * discount) / percentage ;
-            
-            function myfunc(){
-                return (price - discount) * quantity;
-            }
+    let price = stp; 
+    let percentage = 100;
+    let discount = disc;
+    let quantity = qty;
+    
+     if(price == price.valueOf(price)){
+        netPrice = (price * discount) / percentage ;
+
+        function myfunc(){
+            return (price - netPrice) * quantity;
         }
-            myfunc();
-            console.log(myfunc());
+    }
+        myfunc();
+        console.log(myfunc());
 
         detail.push({
             "items": items,
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "disc": disc,
             "netPrice": netPrice
                });
-        localStorage.setItem("data", JSON.stringify(detail));
+        localStorage.setItem("data", JSON.stringify(detail))
         // console.log(items , stp, qty , disc);
         e.preventDefault();
       display_tableData();
