@@ -13,9 +13,11 @@ body{
 }
 
 .container{
-    width: 100vw;
+    width: 90vw;
+    /* box-shadow: 0px 0px 10px #000; */
     height: auto;
     background: #ccc;
+    border-radius: 20px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -23,20 +25,22 @@ body{
     flex-direction: column;
 
     button{
-        width: 60px;
-        height: 30px;
+        width: 70px;
+        height: 35px;
         font-size: 18px;
         margin: 20px;
         background: blue;
-        color: honeydew;
+        color: #ffff;
         cursor: pointer;
+        border: none;
     }
 }
 
 .text-box{
-    width: 30vw;
+    width: 100%;
     height: 120px;
-    border: 2px solid rgb(13, 14, 13);
+    /* border: 2px solid rgb(13, 14, 13); */
+    border-bottom: 2px solid rgb(240, 232, 232) ;
     text-align: center;
 
     h1{
@@ -55,47 +59,58 @@ body{
 }
 
 .costomer-box{
-    width: 60vw;
+    width: 65vw;
     display: flex;
-    align-items: flex-end;
+    /* align-items: flex-end; */
     justify-content: flex-end;
-    border: 2px solid rgb(20, 20, 20);
+    /* border: 2px solid rgb(20, 20, 20); */
+    margin: 5px;
 }
 
 .costomer-data{
-    width: 30vw;
-    border: 1px solid rgb(17, 17, 17);
+    width: 40vw;
+    /* border: 1px solid rgb(17, 17, 17); */
 
     label{
-        font-size: 25px;
+        font-size: 18px;
         padding: px;
-        display: inline-block;
+        display: block;
         
     }
     input{
-        width: 200px;
-        height: 25px;
-        margin: 15px;
+        width: 400px;
+        height: 30px;
+        border-radius: 10px;
+        border: none;
+        font-size: 18px;
+        padding: 10px;
+        /* margin: 15px; */
     }
 }
 
 .data{
     width: 25vw;
-    height: 50px;
-    border: 2px solid black;
+    height: auto;
+    /* border: 2px solid black; */
 
     label{
-        font-size: 35px;
+        font-size: 20px;
         padding: 10px;
+        display: block;
+        margin: 0;
+        padding: 0;
     }
 
     input{
         width: 200px;
         height: 30px;
     }
-
+    
 }
 @media(max-width: 800px){
+    .container{
+        width: 100%;
+    }
     .container .text-box{
         width: 100vw;
     }
@@ -113,11 +128,13 @@ body{
     .costomer-data{
         width: 90vw;
         margin: 10px auto;
+        margin: 0;
+        border: 2px solid red;
     
         label{
             display: block;
-            padding: 0;
-            font-size: 30px;
+            padding: 5px;
+            font-size: 20px;
         }
         input{
             display: block;
@@ -127,27 +144,31 @@ body{
             border-radius: 20px;
             border: none;
             padding: 10px;
-            margin: 0;
+            font-size: 20;
         }
     }
     
     .data{
-        width: 100vw;
-        margin: 5px;
+        width: 80vw;
+        border: 2px solid rgb(13, 14, 13) ;
+        margin-left: 10px;
+
     
     }
 }
 /*  */
 .invoice-box{
-    width: 85vw;
+    width: 65vw;
     height: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
     border: 1px solid rgb(12, 12, 12);
 
     form{
-        width: 80vw;
+        width: 50vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
         border: 1px solid rgb(10, 10, 10);
 
         label{
@@ -155,8 +176,17 @@ body{
             padding: 10px;
         }
         input{
-            width: 200px;
+            width: 180px;
             height: 25px;
+            padding: 5px;
+            /* margin: 5px 20px; */
+        }
+
+        input[type=number]{
+            text-align: right;
+            /* padding: 10px; */
+            padding: 0;
+            width: 120px;
         }
     }
     
@@ -164,7 +194,8 @@ body{
         width: 60px;
         height: 30px;
         font-size: 18px;
-        background: blue;
+        background: rgb(11, 77, 107);
+        border: none;
         color: honeydew;
         cursor: pointer;
         font-weight: bold;
@@ -176,9 +207,13 @@ body{
         width: 100vw;
         height: auto;
         flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
 
         form{
-            width: 90vw;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
             margin: auto;
                
             label{
@@ -191,7 +226,7 @@ body{
                 border-radius: 20px;
                 border: none;
                 padding: 10px;
-                margin: 0;
+                margin: 10px;
                 height: 40px;
             }
             
@@ -208,31 +243,16 @@ body{
 .table-box{
     width: 80vw;
     border: 2px solid black;
+    box-shadow: 1px 1px 15px white;
+    margin-top: 10px;
 
-    .costomer-list{
-        width: 50vw;
-        border: 1px solid rgb(8, 8, 8);
-        margin-left: 20px;
-
-        h1{
-            font-size: 30px;
-            padding: 5px;
-        }
-        h3{
-            padding: 5px;
-            font-size: 25px;
-        }
-        h4{
-            padding: 5px;
-            font-size: 20px;
-        }
-    }
     table{
-        border: 2px solid black;
+        /* border-bottom: 2px solid black; */
         width: 80vw;
         text-align: center;
         font-size: 20px;
         thead{
+            border-bottom: 2px solid black;
             td{
                 border: 1px solid black;
                 font-size: 25px;
@@ -240,7 +260,7 @@ body{
         }
         tbody{
             td{
-                border: 1px solid black;
+                border-bottom: 1px solid black;
             }
         }
     }
@@ -251,12 +271,6 @@ body{
         width: 100vw;
         border: 2px solid black;
     
-        .costomer-list{
-            width: 80vw;
-            border: 1px solid rgb(12, 12, 12);
-            margin-left: 20px;
-    
-        }
         table{
             border: 2px solid black;
             width: 100vw;
@@ -264,5 +278,27 @@ body{
             font-size: 20px;
     }
 }
+}
+
+.container .totalPrice{
+    width: 80vw;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 50px;
+    border: 1px solid black;
+
+    h3{
+        padding: 10px;
+    }
+
+}
+
+@media(max-width: 800px){
+    .container .totalPrice{
+        width: 100%;
+        padding-right: 25px;
+    }
 }
 /*  */

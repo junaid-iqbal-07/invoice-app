@@ -28,23 +28,18 @@
         </div>
         <div class="invoice-box">
             <form action="">
-                <label for="">Items</label>
-                <input type="text" name="items">
-                <label for="">Stp</label>
-                <input type="number" name="stp">
-                <label for="">Qty</label>
-                <input type="number" name="qty">
-                <label for="">Disc</label>
-                <input type="number" name="disc">
+                <!-- <label for="">Items</label> -->
+                <input type="text" name="items" placeholder="Items">
+                <!-- <label for="">Stp</label> -->
+                <input type="number" name="stp" placeholder="Stp">
+                <!-- <label for="">Qty</label> -->
+                <input type="number" name="qty" placeholder="Qty">
+                <!-- <label for="">Disc</label> -->
+                <input type="number" name="disc" placeholder="Disc">
             </form>
             <input type="submit" value="Add" id="submit">
         </div>
         <div class="table-box">
-            <div class="costomer-list">
-                <h1 id="costomername">helo</h1>
-                <h3 id="costomeraddress">address</h3>
-                <h4 id="slipno">slip no</h4>
-            </div>
             <table>
                 <thead>
                     <tr>
@@ -65,6 +60,10 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+        <div class="totalPrice">
+            <h3>Total</h3>
+            <p>000</p>
         </div>
         <button id="print">Print</button>
     </div>

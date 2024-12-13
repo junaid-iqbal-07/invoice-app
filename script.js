@@ -2,20 +2,8 @@ let netPrice;
 // console.log(netPrice)
 let tbody = document.querySelector("tbody");
 let table = document.querySelector("table")
-let costomerName;
-let costomerAdress;
-let slipNo;
-
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("submit").onclick = function (e) {
-        costomerName = document.getElementsByClassName("costomerName")[0]?.value || "";
-        document.getElementById("costomername").textContent =`${costomerName}` ;
-        
-        costomerAdress = document.getElementsByClassName("CostomerAddress")[0]?.value || "";
-        document.getElementById("costomeraddress").textContent =`${costomerAdress}` ;
-        
-        slipNo = document.getElementsByClassName("slipNo")[0]?.value || "";
-        document.getElementById("slipno").textContent =`${slipNo}` ;
     
     const form = document.querySelector("form"); 
     let items = form.elements["items"]?.value || "";
